@@ -1,0 +1,58 @@
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    min-height: 100vh;
+  }
+  
+  .mainContent {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 0%;
+    align-content: center;
+    align-self: center;
+    background-color: #77a83a;
+  }
+  
+  @media (max-width: 991px) {
+    .mainContent {
+      flex-direction: column;
+      padding-left: 20px;
+    }
+  }
+  
+  .welcomeSection {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+    .welcomeSection {
+      width: 100%;
+      align-items: center;
+      margin-top: 40px;
+    }
+  }
+  
+  .welcomeTitle {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+    font-family: Inter, sans-serif;
+  }
+  
+  .welcomeImage {
+    aspect-ratio: 0.89;
+    width: 369px;
+    max-width: 100%;
+    margin-top: 131px;
+  }
+  
+  @media (max-width: 991px) {
+    .welcomeImage {
+      margin-top: 40px;
+    }
+  }

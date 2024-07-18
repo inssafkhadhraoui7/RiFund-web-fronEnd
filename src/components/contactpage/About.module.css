@@ -116,11 +116,11 @@
   /* styles.module.css */
 
   .aboutSection {
-    display: flex; /* Use flexbox for easy vertical alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 20px; /* Adjust padding as needed */
-    width: 60%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    width: 70%;
     height: 500px; /* Specify height with units (e.g., px) */
     background-color: #77a83a; /* Example background color */
     margin: 0 auto; /* Center horizontally */

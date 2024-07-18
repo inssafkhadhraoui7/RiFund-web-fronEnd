@@ -1,14 +1,18 @@
 // src/pages/Home.js
 import React from 'react';
 import styles from './Home.module.css';
-import Listeprojet from '../components/Listedeprojet';
-import Categorie from'../components/categorie';
-import ProjectGrid from '../components/ProjectGrid';
-import About from '../components/About';
+import Listeprojet from '../components/homepage/Listedeprojet';
+import Categorie from'../components/homepage/categorie';
+import ProjectGrid from '../components/homepage/ProjectGrid';
+import About from '../components/contactpage/About';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div className={styles.home}>
+      <Header/>
       <div className={styles.imageContainer}>
+      
         <img
           className={styles.homeimg}
           alt="Home"
@@ -29,6 +33,7 @@ const Home = () => {
           <Categorie />
           <ProjectGrid/>
           <About/>
+          <Footer/>
 
           </div>
     </div>

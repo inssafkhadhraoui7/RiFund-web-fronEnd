@@ -6,6 +6,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import Home from './pages/Home';
+import Contact from './pages/contact';
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   const action = useNavigationType();
@@ -31,6 +33,14 @@ function App() {
         title = "Home Page";
         metaDescription = "Welcome to the Home Page";
         break;
+        case "/contact":
+          title = "Contact Page";
+          metaDescription = "Welcome to the Contact Page";
+          break;
+          case "/login":
+            title = "se connecter Page";
+            metaDescription = "Welcome to these connecter  Page";
+            break;
       default:
         break;
     }
@@ -52,8 +62,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<LoginPage  />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </div>
   );
