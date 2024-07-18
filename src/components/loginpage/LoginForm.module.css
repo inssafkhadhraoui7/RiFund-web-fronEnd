@@ -1,147 +1,159 @@
 .loginFormSection {
-    background-color:white ;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 29px 60px 80px;
-    font-size: 13px;
-    font-weight: 100;
-  }
-  
-  @media (max-width: 991px) {
-    .loginFormSection {
-      padding: 29px 20px 80px;
-    }
-  }
-  
-  .loginIcon {
-    width: 134px;
-    aspect-ratio: 1.2;
-    object-fit: contain;
-  }
-  
-  .loginInstructions {
-    color: #000;
-    font: 400 20px/150% Inter, -apple-system, Roboto, Helvetica, sans-serif;
-    margin-top: 49px;
-    text-align: center;
-  }
-  
-  .loginForm {
-    width: 100%;
-    max-width: 669px;
-    margin-top: 39px;
-  }
-  
-  .inputGroup {
-    display: flex;
-    align-items: center;
-    border: 1px solid #77a83a;
-    margin-bottom: 34px;
-    padding: 17px 37px;
-    background-color: #fff;
-  }
-  
-  .visuallyHidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  
-  .inputField {
-    flex-grow: 1;
-    border: none;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    color: #000;
-    background: transparent;
-  }
-  
-  .inputIcon {
-    width: 30px;
-    aspect-ratio: 0.81;
-  }
-  
-  .submitButton {
-    width: 100%;
-    background-color: #77a83a;
-    color: #fff;
-    font-family: Inter, sans-serif;
-    font-weight: 700;
-    padding: 24px;
-    border: none;
-    cursor: pointer;
-    margin-top: 31px;
-  }
-  
-  .forgotPassword {
-    color: #29261e;
-    font: 10px Inter, sans-serif;
-    text-decoration: none;
-    margin-top: 18px;
-  }
-  
-  .divider {
-    position: relative;
-    text-align: center;
-    margin: 38px 0;
-  }
-  
-  .dividerText {
-    color: #000;
-    background-color: var(--sds-color-background-default-default);
-    padding: 0 10px;
-    position: relative;
-    z-index: 1;
-    font: italic 500 12px Inter, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    border-top: 2px solid #fffcfc;
-  }
-  
-  .socialLoginOptions {
-    width: 349px;
-    max-width: 100%;
-    border: 1px solid #000;
-  }
-  
-  .signupPrompt {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 16px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  
-  .promptIcon {
-    width: 46px;
-    aspect-ratio: 1;
-  }
-  
-  .promptText {
-    color: #ff5c00;
-    font-family: Inter, sans-serif;
-    font-style: italic;
-  }
-  
-  .signupLink {
-    color: #000;
-    font-family: Inter, sans-serif;
-    font-style: italic;
-    text-decoration: none;
-    margin-left: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loginIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.loginInstructions {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loginForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputGroup {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.inputIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.submitButton {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #77a83a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #fff;
+  color: #77a83a;
+  border: 1px solid #77a83a;
+}
+
+.forgotPassword {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #77a83a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.forgotPassword:hover {
+  color: black;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.dividerText {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signupPrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.promptIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.promptIcon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.promptText {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.signupLink {
+  font-size: 16px;
+  color: #77a83a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.signupLink:hover {
+  color: #77a83a;
+}

@@ -1,0 +1,13 @@
+.appContainer {
+    font-family: Inter, sans-serif;
+    line-height: 1.5;
+    
+  }
+  body {
+    background-image: url('./../../public/crowd.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    font-family: Arial, sans-serif;
+  }
+  

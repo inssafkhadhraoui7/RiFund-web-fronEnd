@@ -32,11 +32,8 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="rifund.png" alt="RIF UND Logo" className={styles.logoImage} />
-        <div className={styles.logoText}>
-          <span className={styles.rifText}>RIF</span>
-          <span className={styles.undText}>UND</span>
-        </div>
+      <a href="#home" className={styles.logoImage}> <img src="rifund.jpg" alt="RIF UND Logo" className={styles.logoImage} /></a>
+      
       </div>
       <nav className={styles.navigation}>
         <ul className={styles.navList}>
