@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Contact from './pages/contact';
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import ForgetPassword from "./pages/ForgetPassword";
 
 function App() {
   const action = useNavigationType();
@@ -39,12 +40,16 @@ function App() {
           metaDescription = "Welcome to the Contact Page";
           break;
           case "/login":
-            title = "se connecter Page";
+            title = "Se connecter Page";
             metaDescription = "Welcome to these login  Page";
             break;
             case "/register":
-              title = "inscrire Page";
+              title = "S'inscrire Page";
               metaDescription = "Welcome to these register Page";
+              break;
+              case "/password":
+              title = "password Page";
+              metaDescription = "Welcome to these forget Page";
               break;
       default:
         break;
@@ -67,11 +72,12 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<RegisterPage  />} />
+        <Route path="/" element={<Contact />} />
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/password" element={<ForgetPassword />} />
       </Routes>
     </div>
   );

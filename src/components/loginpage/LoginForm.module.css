@@ -5,6 +5,7 @@
   justify-content: center;
   width: 100%;
   max-width: 400px;
+  height: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -134,8 +135,8 @@
 }
 
 .promptIcon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin: 5px;
 }
 
@@ -156,4 +157,9 @@
 
 .signupLink:hover {
   color: #77a83a;
+}
+.errorMessage {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
 }

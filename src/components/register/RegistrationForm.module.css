@@ -1,21 +1,12 @@
-/* RegistrationForm.module.css */
-
 .registrationFormSection {
-  max-width: 500px;
-  margin: auto;
-  margin-top: 10%;
+  max-width: 900px; /* Increase this value to make the form wider */
+  margin: 0 auto; /* Center the form within the formWrapper */
   padding: 20px;
   border: 1px solid black;
-  border-radius: 5px;
   background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.registrationIcon {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin: 0 auto 20px;
-}
 
 .registrationFormTitle {
   text-align: center;
@@ -60,7 +51,7 @@
 }
 
 .inputIcon {
-  width: 20px;
+  width: 18px;
   height: 20px;
   margin-left: -30px; /* Adjust positioning of the icon */
 }
@@ -115,4 +106,9 @@
 
 .signupLink:hover {
   color: #77a83a;
+}
+.errorMessage {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
 }

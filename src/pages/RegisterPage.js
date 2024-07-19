@@ -5,9 +5,11 @@ import styles from './RegisterPage.module.css';
 
 const RegisterPage = () => {
   return (
-    <div className={styles.appContainer}>
+    <div className={styles.RegisterPage}>
       <Header />
-      <RegistrationForm />
+      <main className={styles.mainContent}>
+        <RegistrationForm />
+      </main>
     </div>
   );
 };

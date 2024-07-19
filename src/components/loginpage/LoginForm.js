@@ -1,22 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './LoginForm.module.css';
 
 function LoginForm() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (username === '' || password === '') {
+      setError('Veuillez remplir tous les champs.');
+    } else {
+      setError('');
+      // Proceed with form submission
+      console.log('Username:', username);
+      console.log('Password:', password);
+    }
+  };
+
   const handleForgotPasswordClick = () => {
-    // Handle forgot password click
+    window.location.href = '/password'; 
   };
 
   const handleSignupClick = () => {
-    // Handle signup click
+    window.location.href = '/register'; 
   };
 
   return (
     <section className={styles.loginFormSection}>
       <img src="logo.png" alt="Login icon" className={styles.loginIcon} />
+      <h2>Connexion</h2>
       <p className={styles.loginInstructions}>
         veuillez entrer vos coordonnées pour vous connecter.
       </p>
-      <form className={styles.loginForm}>
+      <form className={styles.loginForm} onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
           <label htmlFor="username" className={styles.visuallyHidden}>Nom d'utilisateur</label>
           <input
@@ -24,6 +49,8 @@ function LoginForm() {
             id="username"
             placeholder="Nom d'utilisateur"
             className={styles.inputField}
+            value={username}
+            onChange={handleUsernameChange}
           />
           <img src="user2.png" alt="" className={styles.inputIcon} />
         </div>
@@ -34,25 +61,26 @@ function LoginForm() {
             id="password"
             placeholder="Mot de passe"
             className={styles.inputField}
+            value={password}
+            onChange={handlePasswordChange}
           />
           <img src="password.png" alt="" className={styles.inputIcon} />
         </div>
+        {error && <p className={styles.errorMessage}>{error}</p>}
         <button type="submit" className={styles.submitButton}>Se connecter</button>
       </form>
       <button onClick={handleForgotPasswordClick} className={styles.forgotPassword}>Mot de passe oublié?</button>
       <div className={styles.divider}>
         <span className={styles.dividerText}>Ou</span>
       </div>
-   
       <div className={styles.signupPrompt}>
-  <div className={styles.promptIcons}>
-    <img src="face.png" alt="" className={styles.promptIcon} />
-    <img src="gmail.png" alt="" className={styles.promptIcon} />
-  </div>
-  <p className={styles.promptText}>Vous n'avez pas du compte</p>
-  <button onClick={handleSignupClick} className={styles.signupLink}>S'inscrire</button>
-</div>
-
+        <div className={styles.promptIcons}>
+        <img src="face.png" alt="" className={styles.promptIcon} />
+          <img src="gmail.png" alt="" className={styles.promptIcon} />
+        </div>
+        <p className={styles.promptText}>Vous n'avez pas de compte</p>
+        <button onClick={handleSignupClick} className={styles.signupLink}>S'inscrire</button>
+      </div>
     </section>
   );
 }
